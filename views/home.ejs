@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunstas e Respostas</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <%- include ("partials/header") %>
+
+        <main>
+            <section>
+                <h1 style="color:black;"> Perguntas: </h1><br>
+                <% perguntas.forEach((el)=>{ %>
+                    <h4>Titulo: </h4>
+                    <%= el.titulo %><br><br>
+                        <h4>Descricao: </h4>
+                    <%= el.descricao %><br><br>
+                    <button><a href="/pergunta/<%= el.id %>" style="color:black">Responder</a></button>
+                        <br><br><hr><br>
+                    <% }) %>
+
+            </section>
+        </main>
+
+        <footer></footer>
+
+        <script src="/js/script.js"></script>
+</body>
+
+</html>
