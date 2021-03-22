@@ -31,8 +31,6 @@ app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 
 
-
-
 //MIDDLEWARE
 app.use("/", (req, res, next)=>{
     // console.log("antes de chegar no servidor")
@@ -42,13 +40,7 @@ app.use("/", (req, res, next)=>{
     next()
 })
 
-
-
-
 app.use("/", usuario)
-
-
-
 
 
 app.listen(PORT, (err)=>{

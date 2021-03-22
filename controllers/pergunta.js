@@ -7,8 +7,6 @@ module.exports={
             where:{id:id}
         }).then(pergunta=>{
             res.render("pergunta", {pergunta:pergunta})
-
-        })
-        
+        })        
     }
 }

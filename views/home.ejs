@@ -10,9 +10,7 @@
 </head>
 
 <body>
-
     <%- include ("partials/header") %>
-
         <main>
             <section>
                 <h1 style="color:black;"> Perguntas: </h1><br>
@@ -21,15 +19,13 @@
                     <%= el.titulo %><br><br>
                         <h4>Descricao: </h4>
                     <%= el.descricao %><br><br>
-                    <button><a href="/pergunta/<%= el.id %>" style="color:black">Responder</a></button>
-                        <br><br><hr><br>
+                    <button><a href="/pergunta/<%= el.id %>" style="color:black">Responder</a></button><br><br>
+                    <hr><br>
                     <% }) %>
-
             </section>
         </main>
-
-        <footer></footer>
-
+        <footer>
+        </footer>
         <script src="/js/script.js"></script>
 </body>
 
