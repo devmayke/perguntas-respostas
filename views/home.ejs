@@ -13,15 +13,18 @@
     <%- include ("partials/header") %>
         <main>
             <section>
-                <h1 style="color:black;"> Perguntas: </h1><br>
+                <h1 style="color:rgb(98, 98, 230);text-align: center;"> Perguntas </h1><br>
                 <% perguntas.forEach((el)=>{ %>
+                <div class="card">
                     <h4>Titulo: </h4>
-                    <%= el.titulo %><br><br>
-                        <h4>Descricao: </h4>
-                    <%= el.descricao %><br><br>
-                    <button><a href="/pergunta/<%= el.id %>" style="color:black">Responder</a></button><br><br>
+                     <div class="campo"><%= el.titulo %></div> <br>
+                    <h4>Descricao: </h4>
+                    <div class="campo campo2"><%= el.descricao %></div><br>
+                </div>
+                <br>  
+                    <button><a href="/pergunta/<%= el.id %>">Responder</a></button><br><br>
                     <hr><br>
-                    <% }) %>
+                <% }) %>
             </section>
         </main>
         <footer>

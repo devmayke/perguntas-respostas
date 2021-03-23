@@ -9,7 +9,9 @@ module.exports = {
         })
             .then(() => {
                 res.redirect("/")
-                console.log("Pergunta salva no banco de dados")
+                console.log("Resposta salva no banco de dados...")
+            }).catch((err)=>{
+                console.log("Erro ao salvar resposta no banco de dados... Erro>>> ", err)
             })
     }
 }

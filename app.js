@@ -8,6 +8,7 @@ const bodyParser = require("body-parser");
 const { urlencoded } = require("body-parser");
 const connection= require("./models/database")
 const Pergunta= require("./models/Pergunta")
+const Resposta= require("./models/Resposta")
 module.exports = Pergunta;
 
 

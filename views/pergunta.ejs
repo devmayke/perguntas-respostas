@@ -1,2 +1,32 @@
-<h1>Título : <%= pergunta.titulo %></h1>
-<h1>Descrição : <%= pergunta.descricao %></h1>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunstas e Respostas</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include ("partials/header") %>
+        <main>
+            <section>
+                <h1>Título : <%= pergunta.titulo %>
+                </h1>
+                <h1>Descrição : <%= pergunta.descricao %>
+                </h1>
+                <div class="form-box">
+                    <form action="/salvarresposta" method="POST">
+                        <label for="resposta">Resposta:</label><br>
+                        <textarea name="resposta" id="" cols="30" rows="7"
+                            style="margin-top:8px;border-radius:8px;width: 100%;padding:5px;"></textarea><br><br>
+                        <input type="submit" name="" id="enviar" value="Enviar">
+                        <input type="hidden" name="perguntaId" value="<%= pergunta.id %>">
+                       
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+        </footer>
+        <script src="/js/script.js"></script>
+</body>
