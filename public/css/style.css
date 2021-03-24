@@ -10,7 +10,7 @@ body{
     display:flex;
     justify-content:start;
     align-items:center;
-    width: 100%;
+    width: 100% ;
     height:8.5vh; 
     background: rgb(111, 111, 231);
     list-style: none;
@@ -45,7 +45,7 @@ main{
     flex-direction: column;
     justify-content: start; 
     align-items: center;
-    max-width: 70%;
+    width: 70%;
     min-height: calc(90vh - 20px);    
     border-right: 2px solid rgb(175, 146, 202);
     border-left: 2px solid rgb(175, 146, 202);
@@ -106,4 +106,62 @@ footer{
     background: rgb(111, 111, 231);
     box-shadow:-1px -3px 5px rgb(111, 111, 231);
 }
+@media (max-width: 470px){
+    .card{
+        margin:auto;
+        width:calc(99% - 40px);
+    }
+    .menu ul{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    main{
+        display:flex;
+        flex-direction: column;
+        justify-content: start; 
+        align-items: center;
+        width: 100vw;
+     
+    }
+    section{
+        display:flex;
+        flex-direction: column;
+        justify-content: start; 
+        align-items: center;
+        width: 100vw;
+    }
+    footer{
+        display:none
+    }
+    .form-box{
+        margin: auto;
+        max-width:100vw;         
+    }
+
+    .form-box form{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+        width:calc(95vw - 40px);   
+        background: rgb(111, 111, 231);  
+        color:white;
+
+    }
+    #campo-titulo{
+        height:40px;
+        font-size: medium;
+    }
+    #enviar{
+        padding:15px;
+        font-size: 18px;
+    }
+    button{
+        padding:15px;
+        font-size: 18px;
+
+}
+
 
