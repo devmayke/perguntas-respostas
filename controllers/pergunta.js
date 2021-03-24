@@ -7,7 +7,13 @@ module.exports={
         Pergunta.findOne({
             where:{id:id}
         }).then(pergunta=>{
-            res.render("pergunta", {pergunta:pergunta})
+            Resposta.findAll({raw:true,
+                where:{perguntaId:id}                
+            }).then(resposta=>{
+                res.render("pergunta", {pergunta:pergunta, resposta:resposta})
+
+            })
+            
         })        
     }
 }

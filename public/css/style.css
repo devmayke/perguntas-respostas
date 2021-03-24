@@ -78,7 +78,8 @@ h4{
     margin-left:20px;
 }
 .form-box{
-    width:80%;   
+    margin-top: 10px;   
+    min-width:calc(100%-20px);   
     border:1px solid #888;
     background: rgb(111, 111, 231);
     padding:20px;

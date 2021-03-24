@@ -10,20 +10,33 @@
     <%- include ("partials/header") %>
         <main>
             <section>
-                <h1>Título : <%= pergunta.titulo %>
-                </h1>
-                <h1>Descrição : <%= pergunta.descricao %>
-                </h1>
-                <div class="form-box">
-                    <form action="/salvarresposta" method="POST">
-                        <label for="resposta">Resposta:</label><br>
+               <div class="card">
+                    <h4>Titulo: </h4>
+                     <div class="campo"><%= pergunta.titulo %></div> <br>
+                    <h4>Descricao: </h4>
+                    <div class="campo campo2"><%= pergunta.descricao %></div><br>
+                </div>
+                
+                <div class="form-box" >
+                    <form action="/salvarresposta" method="POST" >
+                        <label for="resposta">Sua Resposta:</label><br>
                         <textarea name="resposta" id="" cols="30" rows="7"
                             style="margin-top:8px;border-radius:8px;width: 100%;padding:5px;"></textarea><br><br>
                         <input type="submit" name="" id="enviar" value="Enviar">
-                        <input type="hidden" name="perguntaId" value="<%= pergunta.id %>">
-                       
-                    </form>
+                        <input type="hidden" name="perguntaId" value="<%= pergunta.id %>">                       
+                    </form>                   
                 </div>
+
+                <% if( resposta.length){ %>
+                    <h1 style="text-align:center;color:rgb(98, 98, 230); padding:12px;">Respostas</h1> 
+                <% } %> 
+                                                 
+                <% resposta.forEach((el)=>{ %>
+                    <div class="card">
+                        <label for="resposta"></label><br>
+                            <div class="campo"><%= el.corpo %> %></div> <br>                           
+                        </div<br>
+                <% }) %>
             </section>
         </main>
         <footer>

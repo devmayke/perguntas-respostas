@@ -1,5 +1,4 @@
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,25 +6,23 @@
     <title>Pergunstas e Respostas</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
-
     <%- include ("partials/header") %>
     <main>  
-        <div class="form-box" > 
+        <section>
+            <div class="form-box" > 
                 <form action="/salvarpergunta" method="POST">
-                <label for="titulo">Título:</label><br>
-                <input type="text" placeholder="Digite o título" name="titulo" style="margin-top:8px;border-radius:8px;width: 100%;padding:5px;"><br><br>
-                <hr><br>
-                <label for="descricao">Descrição:</label><br>
-                <textarea name="descricao" id="" cols="30" rows="7"style="margin-top:8px;border-radius:8px;width: 100%;padding:5px;"></textarea><br><br>
-                <input type="submit" name="" id="enviar" value="Enviar">
-            </form>
-        </div>
-                    
+                    <label for="titulo">Título:</label><br>
+                        <input type="text" placeholder="Digite o título" name="titulo" style="margin-top:8px;border-radius:8px;width: 100%;padding:5px;"><br><br>
+                        <hr><br>
+                    <label for="descricao">Descrição:</label><br>
+                        <textarea name="descricao" id="" cols="30" rows="7"style="margin-top:8px;border-radius:8px;width: 100%;padding:5px;"></textarea><br><br>
+                        <input type="submit" name="" id="enviar" value="Enviar">
+                </form>
+            </div> 
+        </section>                    
     </main>
     <footer></footer>
     <script src="/js/script.js"></script>
 </body>
-
 </html>
