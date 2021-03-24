@@ -14,6 +14,9 @@
         <main>
             <section>
                 <h1 style="color:rgb(98, 98, 230);text-align: center;"> Perguntas </h1><br>
+                <% if( !perguntas.length){ %>
+                    <h1 style="text-align: center; font-size: small;"> Ainda não Há perguntas</h1> 
+                <% } %> 
                 <% perguntas.forEach((el)=>{ %>
                     <div class="card">
                         <h4>Titulo: </h4>
