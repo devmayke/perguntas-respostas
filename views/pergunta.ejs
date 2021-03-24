@@ -1,18 +1,12 @@
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pergunstas e Respostas</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-
-<body>
-    <%- include ("partials/header") %>
+<html lang="pt-br">
+    <%- include ("partials/head") %>
+    <body>
+        <%- include ("partials/header") %>
         <main>
             <section>
-               <div class="card">
+                <div class="card">
                     <h4>Titulo: </h4>
-                     <div class="campo"><%= pergunta.titulo %></div> <br>
+                    <div class="campo"><%= pergunta.titulo %></div> <br>
                     <h4>Descricao: </h4>
                     <div class="campo campo2"><%= pergunta.descricao %></div><br>
                 </div>
@@ -30,7 +24,7 @@
                 <% if( resposta.length){ %>
                     <h1 style="text-align:center;color:rgb(98, 98, 230); padding:12px;">Respostas</h1> 
                 <% } %> 
-                                                 
+                                                    
                 <% resposta.forEach((el)=>{ %>
                     <div class="card">
                         <label for="resposta"></label><br>
@@ -39,7 +33,7 @@
                 <% }) %>
             </section>
         </main>
-        <footer>
-        </footer>
+        <%- include ("partials/footer") %>
         <script src="/js/script.js"></script>
-</body>
+    </body>
+</html>
