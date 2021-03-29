@@ -106,9 +106,11 @@ footer{
     box-shadow:-1px -3px 5px rgb(111, 111, 231);
 }
 @media (max-width: 470px){
+
     .card{
         margin:auto;
-        width:calc(99% - 40px);
+        width:calc(100% - 38px);
+        margin-bottom:15px;    
     }
     .menu ul{
         display:flex;
